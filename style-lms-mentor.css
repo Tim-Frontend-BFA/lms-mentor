@@ -83,3 +83,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 20px;
     border-width: thin;
 }
+
+.box{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    outline: 2px dashed #D7D7D7;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gambar-holder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 5;
+    opacity: 0;
+}
+
+::file-selector-button {
+    display: none;
+}
