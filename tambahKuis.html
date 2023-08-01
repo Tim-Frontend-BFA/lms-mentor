@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tambah Kuis</title>
+</head>
+<body>
+    <div class="container card-content">
+        <div class="row" style="margin: 0px; margin-bottom: 16px;">
+            <div class="title-bar"></div>
+            <p class="title">Tambah Kuis</p>
+        </div>
+        <form>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="judul-arrow">
+                    <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
+                </div>
+                <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan judul">
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="deskripsi-arrow">
+                    <label for="deskripsi" class="text-label">Deskripsi<span style="color: red;">*</span></label>
+                </div>
+                <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukkan deskripsi"></textarea>
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
+                    <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
+                </div>
+                <div class="dual" style="width: 100%;">
+                    <div class="input-and-pic" id="tanggal-buka-hold">
+                        <input class="form-control"type="text" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
+                        <img src="calendar-2.png" alt="date">
+                    </div>
+                    <div class="input-and-pic" id="jam-buka-hold">
+                        <input class="form-control"type="text" name="jam-buka" id="jam-buka" placeholder="00:00 ∙ WIB">
+                        <img src="clock.png" alt="time">
+                    </div>
+                </div>
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-tenggat-button">
+                    <label for="tanggal" class="text-label">Tenggat waktu<span style="color: red;">*</span></label>
+                </div>
+                <div class="dual" style="width: 100%;">
+                    <div class="input-and-pic" id="tanggal-tenggat-hold">
+                        <input class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="tanggal-tenggat" id="tanggal-tenggat" placeholder="DD/MM/YYYY">
+                        <img src="calendar-2.png" alt="date">
+                    </div>
+                    <div class="input-and-pic" id="jam-tenggat-hold">
+                        <input class="form-control"type="text" name="jam-tenggat" id="jam-tenggat" placeholder="00:00 ∙ WIB">
+                        <img src="clock.png" alt="time">
+                    </div>
+                </div>
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="durasi-button">
+                    <label for="durasi" class="text-label">Durasi<span style="color: red;">*</span></label>
+                </div>
+                <div class="input-and-pic" id="durasi-hold">
+                    <input class="form-control" type="text" name="durasi" id="durasi" placeholder="00:00:00">
+                    <img src="clock.png" alt="date">
+                </div>
+            </div>
+            <div class="d-grid gap-2" style="margin-top: 24px;">
+                <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
