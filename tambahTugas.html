@@ -24,35 +24,64 @@
             </div>
             <div class="input-holder">
                 <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="gambar-arrow">
-                    <label for="gambar" class="text-label">Gambar pendukung</label>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                    <label for="subjudul" class="text-label">Subjudul</label>
+                </div>
+                <input class="form-control" type="text" name="subjudul" id="subjudul" placeholder="Masukkan subjudul">
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="deskripsi-arrow">
+                    <label for="deskripsi" class="text-label">Deskripsi<span style="color: red;">*</span></label>
+                </div>
+                <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukkan deskripsi"></textarea>
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="dokumen-arrow">
+                    <label for="dokumen" class="text-label">Dokumen pendukung</label>
                 </div>
                 <div class="box">
-                    <input type="file" name="gambar" id="gambar" class="gambar-holder" multiple>
-                    <label for="gambar">
+                    <input type="file" name="dokumen" id="dokumen" class="dokumen-holder" multiple>
+                    <label for="dokumen">
                         <div class="upload-label">
-                            <img src="picture1.png">
-                            <span>Seret dan letakkan gambar anda disini.</span>
+                            <img src="document-text.png">
+                            <span style="color: #929292;">Seret dan letakkan dokumen anda disini.</span>
                         </div>
                     </label>
                 </div>
             </div>
             <div class="input-holder">
                 <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="jawaban-button">
-                    <label for="jawaban1" class="text-label">Jawaban<span style="color: red;">*</span></label>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
+                    <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
                 </div>
-                <input class="form-control" type="text" name="jawaban1" id="jawaban1" placeholder="Masukkan pilihan">
-                <input class="form-control" type="text" name="jawaban2" id="jawaban2" placeholder="Masukkan pilihan">
-                <input class="form-control" type="text" name="jawaban3" id="jawaban3" placeholder="Masukkan pilihan">
-                <input class="form-control" type="text" name="jawaban4" id="jawaban4" placeholder="Masukkan pilihan">
+                <div class="dual" style="width: 100%;">
+                    <div class="input-and-pic" id="tanggal-buka-hold">
+                        <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
+                        <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
+                    </div>
+                    <div class="input-and-pic" id="jam-buka-hold">
+                        <input class="form-control"type="text" name="jam-buka" id="jam-buka" placeholder="00:00 ∙ WIB">
+                        <img src="clock.png" alt="time">
+                    </div>
+                </div>
             </div>
             <div class="input-holder">
                 <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="kunci-jawaban-button">
-                    <label for="kunci-jawaban" class="text-label">Kunci jawaban<span style="color: red;">*</span></label>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-tenggat-button">
+                    <label for="tanggal" class="text-label">Tenggat waktu<span style="color: red;">*</span></label>
                 </div>
-                <input class="form-control" type="text" name="kunci-jawaban" id="kunci-jawaban" placeholder="Masukkan kunci jawaban">
+                <div class="dual" style="width: 100%;">
+                    <div class="input-and-pic" id="tanggal-tenggat-hold">
+                        <input class="form-control" type="text" onfocus="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" onblur="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" name="tanggal-tenggat" id="tanggal-tenggat" placeholder="DD/MM/YYYY">
+                        <img src="calendar-2.png" alt="date" id="tanggal-ditutup-cal">
+                    </div>
+                    <div class="input-and-pic" id="jam-tenggat-hold">
+                        <input class="form-control"type="text" name="jam-tenggat" id="jam-tenggat" placeholder="00:00 ∙ WIB">
+                        <img src="clock.png" alt="time">
+                    </div>
+                </div>
             </div>
             <div class="d-grid gap-2" style="margin-top: 24px;">
                 <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
@@ -61,11 +90,25 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
-        $('#gambar').change(function(event){
+        $('#dokumen').change(function(event){
             let itempath = URL.createObjectURL(event.target.files[0]);
             var carinama = event.target.files[0];
             $('.upload-label > span').text(carinama.name);
         })
+    </script>
+    <script>
+        function hideCal(inputID, imageID){
+            inputItem = document.getElementById(inputID);
+            imageItem = document.getElementById(imageID);
+
+            if(inputItem.type == 'text'){
+                imageItem.style.display = 'none';
+                inputItem.type = 'date';
+            } else if(inputItem.type == 'date'){
+                imageItem.style.display = 'block';
+                inputItem.type = 'text';
+            }
+        }
     </script>
 </body>
 </html>
