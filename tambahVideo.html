@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style-lms-mentor.css">
+    <title>Tambah Video</title>
+</head>
+<body>
+    <div class="container card-content">
+        <div class="row" style="margin: 0px; margin-bottom: 16px;">
+            <div class="title-bar"></div>
+            <p class="title">Tambah Video</p>
+        </div>
+        <form>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="judul-arrow">
+                    <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
+                </div>
+                <!--
+                    JUDUL TUGAS
+                    To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
+                -->
+                <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan judul">
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                    <label for="subjudul" class="text-label">Subjudul</label>
+                </div>
+                <!--
+                    SUBJUDUL TUGAS
+                    To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
+                -->
+                <input class="form-control" type="text" name="subjudul" id="subjudul" placeholder="Masukkan subjudul">
+            </div>
+            <div class="input-holder">
+                <div>
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tautan-arrow">
+                    <label for="tautan" class="text-label">Tautan Video<span style="color: red;">*</span></label>
+                </div>
+                <!--
+                    TAUTAN TUGAS
+                    To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
+                -->
+                <input class="form-control"type="text" name="tautan" id="tautan" placeholder="Masukkan tautan drive">
+            </div>
+            <div class="d-grid gap-2" style="margin-top: 24px;">
+                <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
