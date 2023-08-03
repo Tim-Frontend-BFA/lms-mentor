@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
 
 *{
     font-family: 'Poppins';
@@ -144,4 +145,58 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-left: 24px;
     border: 1 solid #d7d7d7;
     color: #929292;
+}
+
+.slick-prev:before{
+    font-family: "Font Awesome 5 Free";
+    color: black;
+    content: "\f104";
+    font-weight: 900;
+}
+
+.slick-next:before{
+    font-family: "Font Awesome 5 Free";
+    color: black;
+    content: "\f105";
+    font-weight: 900;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+  }
+
+.card-text{
+    color: #929292;
+}
+
+.kelas-card-hold{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0px;
+    width: 300px;
+}
+
+.kelas-card-hold a{
+    text-decoration: none;
+}
+
+.timeline-card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.timeline-card-img{
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-card-text{
+    width: 162px;
+    height: 81px;
+}
+
+.timeline-card-text p{
+    margin: 0px;
 }
