@@ -23,8 +23,22 @@ body{
 }
 
 .presensi-width{
-    width: auto;
+    width: 100%; 
+    margin: 0px; 
+    padding: 10px;
     min-width: max(100%, 1200px);
+}
+
+.presensi-width span a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f9a215;
+    border-radius: 10px;
+    padding: 5px 42px;
+    width: 123px;
+    text-decoration: none;
+    color: #f9a215;
 }
 
 .title-bar{
@@ -234,4 +248,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+hr{
+    width: 100%;
 }
