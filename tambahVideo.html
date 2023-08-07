@@ -9,49 +9,124 @@
     <title>Tambah Video</title>
 </head>
 <body>
-    <div class="container card-content">
-        <div class="row" style="margin: 0px; margin-bottom: 16px;">
-            <div class="title-bar"></div>
-            <p class="title">Tambah Video</p>
+    <div class="page-container active">
+        <!--Sidebar-->
+        <div class="sidebar active">
+            <div class="menu-btn">
+                <i class="ph-bold ph-caret-left"></i>
+            </div>
+            <div class="head">
+                <div class="logo-img">
+                <img src="logo bfa 1.png" alt="" />
+                </div>
+                <div class="logo-details">
+                <p class="title">Bildung für Alle</p>
+                </div>
+            </div>
+            <div>
+                <div class="menu">
+                <ul>
+                    <li class="active">
+                    <a href="#">
+                        <img src="active beranda.svg" alt="" />
+                        <span class="text">Beranda</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="evaluasi.svg" alt="" />
+                        <span class="text">Evaluasi</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="presensi.svg" alt="" />
+                        <span class="text">Presensi</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="nilai.svg" alt="" />
+                        <span class="text">Nilai</span>
+                    </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </div>
-        <form>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="judul-arrow">
-                    <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
+          <!--Sidebar-->
+        
+        <div class="content">
+            <!--Navbar-->
+          <div class="navbar-us active" style="margin: 0px;">
+            <div class="side-right">
+              <img src="lonceng.svg" alt="" />
+              <p>fasya morino</p>
+              <img src="profile.svg" alt="" style="margin-left: 20px" />
+            </div>
+          </div>
+          <!--Navbar-->
+          <div class="container card-content">
+            <div class="row" style="margin: 0px; margin-bottom: 16px;">
+                <div class="title-bar"></div>
+                <p class="title">Tambah Video</p>
+            </div>
+            <form>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="judul-arrow">
+                        <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
+                    </div>
+                    <!--
+                        JUDUL TUGAS
+                        To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
+                    -->
+                    <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan judul">
                 </div>
-                <!--
-                    JUDUL TUGAS
-                    To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
-                -->
-                <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan judul">
-            </div>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
-                    <label for="subjudul" class="text-label">Subjudul</label>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                        <label for="subjudul" class="text-label">Subjudul</label>
+                    </div>
+                    <!--
+                        SUBJUDUL TUGAS
+                        To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
+                    -->
+                    <input class="form-control" type="text" name="subjudul" id="subjudul" placeholder="Masukkan subjudul">
                 </div>
-                <!--
-                    SUBJUDUL TUGAS
-                    To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
-                -->
-                <input class="form-control" type="text" name="subjudul" id="subjudul" placeholder="Masukkan subjudul">
-            </div>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tautan-arrow">
-                    <label for="tautan" class="text-label">Tautan Video<span style="color: red;">*</span></label>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tautan-arrow">
+                        <label for="tautan" class="text-label">Tautan Video<span style="color: red;">*</span></label>
+                    </div>
+                    <!--
+                        TAUTAN TUGAS
+                        To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
+                    -->
+                    <input class="form-control"type="text" name="tautan" id="tautan" placeholder="Masukkan tautan drive">
                 </div>
-                <!--
-                    TAUTAN TUGAS
-                    To backend: di halaman "Tambah" placeholder jadi masukkan, di halaman "Edit" placeholder jadi sesuai DB
-                -->
-                <input class="form-control"type="text" name="tautan" id="tautan" placeholder="Masukkan tautan drive">
-            </div>
-            <div class="d-grid gap-2" style="margin-top: 24px;">
-                <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
-            </div>
-        </form>
+                <div class="d-grid gap-2" style="margin-top: 24px;">
+                    <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
+                </div>
+            </form>
+        </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(".menu-btn").click(function () {
+            $(".sidebar").toggleClass("active");
+        });
+
+        $(".menu-btn").click(function () {
+            $(".navbar-us").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".suggest").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".page-container").toggleClass("active");
+        });
+    </script>
 </body>
 </html>

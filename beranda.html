@@ -236,7 +236,7 @@
                 <div class="row justify-content-center timeline">
                     <a href="#">
                         <div class="timeline-card">
-                            <img src="tugas-logo.png" class="timeline-card-img">
+                            <img src="tugas-logo-1.png" class="timeline-card-img">
                             <div class="timeline-card-text">
                                 <p class="timeline-title">Despair</p>
                                 <p class="timeline-subtitle">Tugas</p>
@@ -349,6 +349,20 @@
         slidesToScroll: 5,
         responsive: [
             {
+            breakpoint: 1770,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+            }
+            },
+            {
+            breakpoint: 1210,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            }
+            },
+            {
             breakpoint: 992,
             settings: {
                 slidesToShow: 2,
@@ -373,13 +387,13 @@
         });
 
         $(".menu-btn").click(function () {
-            $(".navbar").toggleClass("active");
+            $(".navbar-us").toggleClass("active");
         });
         $(".menu-btn").click(function () {
             $(".suggest").toggleClass("active");
         });
         $(".menu-btn").click(function () {
-            $(".container").toggleClass("active");
+            $(".page-container").toggleClass("active");
         });
     </script>
 </body>

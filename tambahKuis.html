@@ -9,73 +9,132 @@
     <title>Tambah Kuis</title>
 </head>
 <body>
-    <div class="container card-content">
-        <div class="row" style="margin: 0px; margin-bottom: 16px;">
-            <div class="title-bar"></div>
-            <p class="title">Tambah Kuis</p>
+    <div class="page-container active">
+        <!--Sidebar-->
+        <div class="sidebar active">
+            <div class="menu-btn">
+                <i class="ph-bold ph-caret-left"></i>
+            </div>
+            <div class="head">
+                <div class="logo-img">
+                <img src="logo bfa 1.png" alt="" />
+                </div>
+                <div class="logo-details">
+                <p class="title">Bildung für Alle</p>
+                </div>
+            </div>
+            <div>
+                <div class="menu">
+                <ul>
+                    <li class="active">
+                    <a href="#">
+                        <img src="active beranda.svg" alt="" />
+                        <span class="text">Beranda</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="evaluasi.svg" alt="" />
+                        <span class="text">Evaluasi</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="presensi.svg" alt="" />
+                        <span class="text">Presensi</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="nilai.svg" alt="" />
+                        <span class="text">Nilai</span>
+                    </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </div>
-        <form>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="judul-arrow">
-                    <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
-                </div>
-                <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan judul">
+          <!--Sidebar-->
+        
+        <div class="content">
+            <!--Navbar-->
+          <div class="navbar-us active" style="margin: 0px;">
+            <div class="side-right">
+              <img src="lonceng.svg" alt="" />
+              <p>fasya morino</p>
+              <img src="profile.svg" alt="" style="margin-left: 20px" />
             </div>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="deskripsi-arrow">
-                    <label for="deskripsi" class="text-label">Deskripsi<span style="color: red;">*</span></label>
-                </div>
-                <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukkan deskripsi"></textarea>
+          </div>
+          <!--Navbar-->
+          <div class="container card-content">
+            <div class="row" style="margin: 0px; margin-bottom: 16px;">
+                <div class="title-bar"></div>
+                <p class="title">Tambah Kuis</p>
             </div>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
-                    <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
-                </div>
-                <div class="dual" style="width: 100%;">
-                    <div class="input-and-pic" id="tanggal-buka-hold">
-                        <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
-                        <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
+            <form>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="judul-arrow">
+                        <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
                     </div>
-                    <div class="input-and-pic" id="jam-buka-hold">
-                        <input class="form-control"type="text" name="jam-buka" id="jam-buka" placeholder="00:00 ∙ WIB">
-                        <img src="clock.png" alt="time">
+                    <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan judul">
+                </div>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="deskripsi-arrow">
+                        <label for="deskripsi" class="text-label">Deskripsi<span style="color: red;">*</span></label>
+                    </div>
+                    <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukkan deskripsi"></textarea>
+                </div>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
+                        <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
+                    </div>
+                    <div class="dual" style="width: 100%;">
+                        <div class="input-and-pic" id="tanggal-buka-hold">
+                            <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
+                            <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
+                        </div>
+                        <div class="input-and-pic" id="jam-buka-hold">
+                            <input class="form-control"type="text" name="jam-buka" id="jam-buka" placeholder="00:00 ∙ WIB">
+                            <img src="clock.png" alt="time">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-tenggat-button">
-                    <label for="tanggal" class="text-label">Tenggat waktu<span style="color: red;">*</span></label>
-                </div>
-                <div class="dual" style="width: 100%;">
-                    <div class="input-and-pic" id="tanggal-tenggat-hold">
-                        <input class="form-control" type="text" onfocus="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" onblur="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" name="tanggal-tenggat" id="tanggal-tenggat" placeholder="DD/MM/YYYY">
-                        <img src="calendar-2.png" alt="date" id="tanggal-ditutup-cal">
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-tenggat-button">
+                        <label for="tanggal" class="text-label">Tenggat waktu<span style="color: red;">*</span></label>
                     </div>
-                    <div class="input-and-pic" id="jam-tenggat-hold">
-                        <input class="form-control"type="text" name="jam-tenggat" id="jam-tenggat" placeholder="00:00 ∙ WIB">
-                        <img src="clock.png" alt="time">
+                    <div class="dual" style="width: 100%;">
+                        <div class="input-and-pic" id="tanggal-tenggat-hold">
+                            <input class="form-control" type="text" onfocus="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" onblur="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" name="tanggal-tenggat" id="tanggal-tenggat" placeholder="DD/MM/YYYY">
+                            <img src="calendar-2.png" alt="date" id="tanggal-ditutup-cal">
+                        </div>
+                        <div class="input-and-pic" id="jam-tenggat-hold">
+                            <input class="form-control"type="text" name="jam-tenggat" id="jam-tenggat" placeholder="00:00 ∙ WIB">
+                            <img src="clock.png" alt="time">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="input-holder">
-                <div>
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="durasi-button">
-                    <label for="durasi" class="text-label">Durasi<span style="color: red;">*</span></label>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="durasi-button">
+                        <label for="durasi" class="text-label">Durasi<span style="color: red;">*</span></label>
+                    </div>
+                    <div class="input-and-pic" id="durasi-hold">
+                        <input class="form-control" type="text" name="durasi" id="durasi" placeholder="00:00:00">
+                        <img src="clock.png" alt="date">
+                    </div>
                 </div>
-                <div class="input-and-pic" id="durasi-hold">
-                    <input class="form-control" type="text" name="durasi" id="durasi" placeholder="00:00:00">
-                    <img src="clock.png" alt="date">
+                <div class="d-grid gap-2" style="margin-top: 24px;">
+                    <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
                 </div>
-            </div>
-            <div class="d-grid gap-2" style="margin-top: 24px;">
-                <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+        </div>
+        </div>
     <script>
         function hideCal(inputID, imageID){
             inputItem = document.getElementById(inputID);
@@ -89,6 +148,22 @@
                 inputItem.type = 'text';
             }
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(".menu-btn").click(function () {
+            $(".sidebar").toggleClass("active");
+        });
+
+        $(".menu-btn").click(function () {
+            $(".navbar-us").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".suggest").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".page-container").toggleClass("active");
+        });
     </script>
 </body>
 </html>
