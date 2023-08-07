@@ -12,44 +12,90 @@
     <div class="container card-content">
         <div class="row" style="margin: 0px; margin-bottom: 16px;">
             <div class="title-bar"></div>
-            <p class="title">Presensi Guru</p>
+            <p class="title">Tambah Presensi</p>
         </div>
-        <div class="table-container-presensi">
-            <div class="row justify-content-between presensi-width">
-                <span style="padding: 0px; width: 20%;"><b>Nama Guru</b></span>
-                <span style="padding: 0px; width: 20%;"><b>Total Durasi Mengajar</b></span>
-                <span style="padding: 0px; width: 20%;"><b>Total Sinkronus</b></span>
-                <span style="padding: 0px; width: 20%;"><b>Total Asinkronus</b></span>
+        <div class="input-holder">
+            <div>
+                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
+                <label for="bukti" class="text-label">Bukti Pembelajaran<span style="color: red;">*</span></label>
             </div>
-            <hr>
-            <div class="row justify-content-between presensi-width">
-                <span style="padding: 0px; width: 20%;">Vani Adila</span>
-                <span style="padding: 0px; width: 20%;">3258</span>
-                <span style="padding: 0px; width: 20%;">3</span>
-                <span style="padding: 0px; width: 20%;">2</span>
+            <div class="box">
+                <input type="file" name="bukti" id="bukti" class="bukti-holder" multiple>
+                <label for="bukti">
+                    <div class="upload-label">
+                        <img src="picture1.png">
+                        <span style="color: #929292;">Seret dan letakkan bukti anda disini.</span>
+                    </div>
+                </label>
             </div>
         </div>
-    </div>
-    <div class="container card-content">
+        <div class="input-holder">
+            <div>
+                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tipe-arrow">
+                <label for="tipe" class="text-label">Tipe<span style="color: red;">*</span></label>
+            </div>
+            <select name="tipe" id="tipe" class="form-select">
+                <option selected>Silakan Pilih Tipe Pengajaran</option>
+                <option value="sinkron">Sinkronus</option>
+                <option value="asinkron">Asinkronus</option>
+            </select>
+        </div>
+        <div class="input-holder">
+            <div>
+                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="catatan-arrow">
+                <label for="catatan" class="text-label">Catatan<span style="color: red;">*</span></label>
+            </div>
+            <textarea class="form-control" name="catatan" id="catatan" cols="30" rows="10" placeholder="Masukkan catatan mengajar hari ini"></textarea>
+        </div>
+        <div class="input-holder">
+            <div class="dual" style="width: 100%;">
+                <div style="width: 47%;">
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
+                    <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
+                </div>
+                <div style="width: 47%;">
+                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="durasi-button">
+                    <label for="durasi" class="text-label">Durasi<span style="color: red;">*</span></label>
+                </div>
+            </div>
+            <div class="dual" style="width: 100%;">
+                <div class="input-and-pic" id="tanggal-buka-hold">
+                    <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
+                    <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
+                </div>
+                <div class="input-and-pic" id="durasi-hold">
+                    <input class="form-control"type="text" name="durasi" id="durasi" placeholder="0">
+                    <img src="clock.png" alt="time">
+                </div>
+            </div>
+        </div>
+        <hr>
         <div class="row" style="margin: 0px; margin-bottom: 16px;">
             <div class="title-bar"></div>
-            <p class="title">Riwayat Presensi Guru</p>
-        </div>
-        <div class="table-container-presensi">
-            <div class="row justify-content-between presensi-width">
-                <span style="padding: 0px; width: 5%;"><b>No.</b></span>
-                <span style="padding: 0px; width: 25%;"><b>Tanggal Presensi</b></span>
-                <span style="padding: 0px; width: 30%;"><b>Catatan</b></span>
-                <span style="padding: 0px; width: 20%;"><b>Detail</b></span>
-            </div>
-            <hr>
-            <div class="row justify-content-between presensi-width">
-                <span style="padding: 0px; width: 5%;">1</span>
-                <span style="padding: 0px; width: 25%;">2023-07-10</span>
-                <span style="padding: 0px; width: 30%;">Belajar Introduction in Germany</span>
-                <span style="padding: 0px; width: 20%;"><a href="#"><b>Detail</b></a></span>
-            </div>
+            <p class="title">Presensi Murid</p>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $('#bukti').change(function(event){
+            let itempath = URL.createObjectURL(event.target.files[0]);
+            var carinama = event.target.files[0];
+            $('.upload-label > span').text(carinama.name);
+        })
+    </script>
+    <script>
+        function hideCal(inputID, imageID){
+            inputItem = document.getElementById(inputID);
+            imageItem = document.getElementById(imageID);
+
+            if(inputItem.type == 'text'){
+                imageItem.style.display = 'none';
+                inputItem.type = 'date';
+            } else if(inputItem.type == 'date'){
+                imageItem.style.display = 'block';
+                inputItem.type = 'text';
+            }
+        }
+    </script>
 </body>
 </html>
