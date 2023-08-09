@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style-lms-mentor.css">
+    <title>Tambah Tautan</title>
+</head>
+<body>
+<div class="page-container active">
+    <!--Sidebar-->
+    <div class="sidebar active">
+        <div class="menu-btn">
+            <i class="ph-bold ph-caret-left"></i>
+        </div>
+        <div class="head">
+            <div class="logo-img">
+            <img src="logo bfa 1.png" alt="" />
+            </div>
+            <div class="logo-details">
+            <p class="title">Bildung für Alle</p>
+            </div>
+        </div>
+        <div>
+            <div class="menu">
+            <ul>
+                <li class="active">
+                <a href="#">
+                    <img src="active beranda.svg" alt="" />
+                    <span class="text">Beranda</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <img src="evaluasi.svg" alt="" />
+                    <span class="text">Evaluasi</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <img src="presensi.svg" alt="" />
+                    <span class="text">Presensi</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <img src="nilai.svg" alt="" />
+                    <span class="text">Nilai</span>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+        <!--Sidebar-->
+
+    <div class="content">
+        <!--Navbar-->
+        <div class="navbar-us active" style="margin: 0px;">
+            <div class="side-right">
+                <img src="lonceng.svg" alt="" />
+                <p>fasya morino</p>
+                <img src="profile.svg" alt="" style="margin-left: 20px" />
+            </div>
+        </div>
+        <!--Navbar-->
+
+
+        <!--TO BACKEND-->
+        <!--item-1 UBAH PER-ID (id)-->
+        <div class="container card-content" style="max-width: 2500px; width: 90vw;" id="pertemuan1-hold">
+            <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                <div class="title-bar"></div>
+                <div class="row justify-content-between">
+                    <form style="width: 90%;">
+                        <!--
+                            ENABLE: CLASS 'bukan-tambah-topik'
+                            DISABLE: CLASS 'tambah-topik'
+                        -->
+                        <!--item2 UBAH PER-ID (name & id)-->
+                        <input style="padding-left: 12px;outline: none;border: none;" type="text" name="pertemuan1" id="pertemuan1" class="form-control tambah-topik" value="Pertemuan 01 - Perkenalan / einführung" disabled>
+                        <input type="submit" hidden>
+                    </form>
+                    <!--item3 UBAH PER-ID (data-bs-target)-->
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal1" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                </div>
+            </div>
+            <!--UBAH PER-ID - ikut item3(id)-->
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="enabledisable('pertemuan1')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="hideshow('pertemuan1')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-sembunyi.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sembunyikan/tampilkan</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="eraseitem('pertemuan1','pertemuan1-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF NOTE-->
+
+        <div class="container card-content" style="max-width: 2500px; width: 90vw;" id="pertemuan2-hold">
+            <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                <div class="title-bar"></div>
+                <div class="row justify-content-between">
+                    <form style="width: 90%;"">
+                        <input style="padding-left: 12px;outline: none;border: none;" type="text" name="pertemuan2" id="pertemuan2" class="form-control bukan-tambah-topik" value="Tetra Iram" disabled>
+                    </form>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal2" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                </div>
+            </div>
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" onclick="enabledisable('pertemuan2')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <button type="button" onclick="hideshow('pertemuan2')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;" class="text-left">
+                                <img src="sunting-sembunyi.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sembunyikan/tampilkan</span>
+                            </button>
+                            <button type="button" onclick="eraseitem('pertemuan2','pertemuan2-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container card-content" style="max-width: 2500px; width: 90vw; display: none;" id="form-tambah-topik">
+            <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                <div class="title-bar"></div>
+                <form style="width: 95%;">
+                    <input style="padding-left: 12px;outline: none;border: none;" type="text" name="namaTopik" id="namaTopik" class="form-control tambah-topik baru" placeholder="Masukkan judul topik">
+                    <input type="submit" hidden>
+                </form>
+            </div>
+        </div>
+        <div class="container" style="max-width: 2500px; width: 90vw; margin-top: 20px;">
+            <div class="row justify-content-end">
+                <a onclick="tambahitem()" class="topic-button">
+                    <p class="topic-button-text">+ Tambah Topik</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(".menu-btn").click(function () {
+            $(".sidebar").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".navbar-us").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".suggest").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".page-container").toggleClass("active");
+        });
+    </script>
+    <script>
+        function hideshow(nameid){
+            var nameitem = document.getElementById(nameid);
+
+            if(nameitem.classList.contains("bukan-tambah-topik")){
+                nameitem.classList.remove("bukan-tambah-topik");
+                nameitem.classList.add("tambah-topik");
+                
+            } else if(nameitem.classList.contains("tambah-topik")){
+                nameitem.classList.remove("tambah-topik");
+                nameitem.classList.add("bukan-tambah-topik");
+            }
+        }
+        function enabledisable(nameid){
+            var nameitem = document.getElementById(nameid);
+
+            if (nameitem.disabled){
+                nameitem.disabled = false
+            } else{
+                nameitem.disabled = true
+            }
+        }
+        function eraseitem(topikid, holderid){
+            var topik = document.getElementById(topikid);
+            var holder = document.getElementById(holderid);
+
+            holder.style.display = "none";
+        }
+        function tambahitem(){
+            document.getElementById('form-tambah-topik').style.display = "block";
+        }
+    </script>
+</body>
+</html>

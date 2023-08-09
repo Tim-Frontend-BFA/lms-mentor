@@ -429,6 +429,90 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: normal;
 }
 
-hr{
+.link-holder-pertemuan{
+    width: 95%;
+    margin-right: 5px;
+}
+
+.text-pertemuan{
+    color: #929292;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.edit-menu{
+    color: #F9A215;
+}
+
+.tambah-topik{
     width: 100%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    color: #d7d7d7
+}
+
+.bukan-tambah-topik{
+    width: 100%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    color: black;
+}
+
+.topic-button{
+    display: flex;
+    width: 186px;
+    height: 56px;
+    padding: 16px 32px 16px 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-hal-pertemuan{
+    width: 1%;
+    padding: 0px;
+    background-color: #fff;
+    border: none;
+}
+
+.topic-button-text{
+    color: #F9A215;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px;
+    user-select:none;
+}
+
+input[type='text'].baru::-webkit-input-placeholder {
+    color:#d7d7d7;
+}
+
+input[type='text'].baru::-moz-placeholder {
+    color:#d7d7d7;
+}
+
+input[type='text'].baru::-ms-placeholder {
+    color:#d7d7d7;
+}
+
+input[type='text'].baru::placeholder {
+    color:#d7d7d7;
+}
+
+input[type='text']:disabled{
+    background-color: #fff;
 }
