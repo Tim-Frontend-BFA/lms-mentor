@@ -325,6 +325,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: none;
     border-bottom: 1px solid #929292;
     text-align: center;
+    color: #F9A215;
 }
 
 .nilai-input:focus{
@@ -515,4 +516,95 @@ input[type='text'].baru::placeholder {
 
 input[type='text']:disabled{
     background-color: #fff;
+}
+
+/* SWITCH */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .onandof {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .onandof:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .onandof {
+    background-color: #f9a215;
+  }
+  
+  input:focus + .onandof {
+    box-shadow: 0 0 1px #f9a215;
+  }
+  
+  input:checked + .onandof:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .onandof.round {
+    border-radius: 34px;
+  }
+  
+  .onandof.round:before {
+    border-radius: 50%;
+  }
+/* SWITCH */
+
+input[type=radio] {
+    appearance: none;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #929292;
+    border-radius:50%;
+ }
+
+input[type=radio]:checked {
+    background-color: #f9a215;
+    border:  1px solid #fff;
+ }
+
+ input[type=radio]:checked + label{
+    color: #f9a215;
+}
+
+option{
+    color:#F9A215;
+}
+
+.presensi-width span{
+    display: flex;
+    align-items: center;
 }

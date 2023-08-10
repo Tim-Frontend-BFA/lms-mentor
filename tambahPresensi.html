@@ -3,76 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style-lms-mentor.css">
     <title>Presensi</title>
 </head>
 <body>
-    <div class="container card-content">
-        <div class="row" style="margin: 0px; margin-bottom: 16px;">
-            <div class="title-bar"></div>
-            <p class="title">Tambah Presensi</p>
-        </div>
-        <div class="input-holder">
-            <div>
-                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
-                <label for="bukti" class="text-label">Bukti Pembelajaran<span style="color: red;">*</span></label>
+    <div class="page-container active">
+        <!--Sidebar-->
+        <div class="sidebar active">
+            <div class="menu-btn">
+                <i class="ph-bold ph-caret-left"></i>
             </div>
-            <div class="box">
-                <input type="file" name="bukti" id="bukti" class="bukti-holder" multiple>
-                <label for="bukti">
-                    <div class="upload-label">
-                        <img src="picture1.png">
-                        <span style="color: #929292;">Seret dan letakkan bukti anda disini.</span>
+            <div class="head">
+                <div class="logo-img">
+                <img src="logo bfa 1.png" alt="" />
+                </div>
+                <div class="logo-details">
+                <p class="title">Bildung für Alle</p>
+                </div>
+            </div>
+            <div>
+                <div class="menu">
+                <ul>
+                    <li class="active">
+                    <a href="#">
+                        <img src="active beranda.svg" alt="" />
+                        <span class="text">Beranda</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="evaluasi.svg" alt="" />
+                        <span class="text">Evaluasi</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="presensi.svg" alt="" />
+                        <span class="text">Presensi</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="nilai.svg" alt="" />
+                        <span class="text">Nilai</span>
+                    </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+          <!--Sidebar-->
+        
+        <div class="content">
+            <!--Navbar-->
+          <div class="navbar-us active" style="margin: 0px;">
+            <div class="side-right">
+              <img src="lonceng.svg" alt="" />
+              <p>fasya morino</p>
+              <img src="profile.svg" alt="" style="margin-left: 20px" />
+            </div>
+          </div>
+          <!--Navbar-->
+            <div class="container card-content" style="max-width: 2500px; width: 90vw;">
+                <div class="row" style="margin: 0px; margin-bottom: 16px;">
+                    <div class="title-bar"></div>
+                    <p class="title">Tambah Presensi</p>
+                </div>
+                <form action="">
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
+                        <label for="bukti" class="text-label">Bukti Pembelajaran<span style="color: red;">*</span></label>
                     </div>
-                </label>
-            </div>
-        </div>
-        <div class="input-holder">
-            <div>
-                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tipe-arrow">
-                <label for="tipe" class="text-label">Tipe<span style="color: red;">*</span></label>
-            </div>
-            <select name="tipe" id="tipe" class="form-select">
-                <option selected>Silakan Pilih Tipe Pengajaran</option>
-                <option value="sinkron">Sinkronus</option>
-                <option value="asinkron">Asinkronus</option>
-            </select>
-        </div>
-        <div class="input-holder">
-            <div>
-                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="catatan-arrow">
-                <label for="catatan" class="text-label">Catatan<span style="color: red;">*</span></label>
-            </div>
-            <textarea class="form-control" name="catatan" id="catatan" cols="30" rows="10" placeholder="Masukkan catatan mengajar hari ini"></textarea>
-        </div>
-        <div class="input-holder">
-            <div class="dual" style="width: 100%;">
-                <div style="width: 47%;">
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
-                    <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
+                    <div class="box">
+                        <input type="file" name="bukti" id="bukti" class="bukti-holder" multiple>
+                        <label for="bukti">
+                            <div class="upload-label">
+                                <img src="picture1.png">
+                                <span style="color: #929292;">Seret dan letakkan bukti anda disini.</span>
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <div style="width: 47%;">
-                    <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="durasi-button">
-                    <label for="durasi" class="text-label">Durasi<span style="color: red;">*</span></label>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tipe-arrow">
+                        <label for="tipe" class="text-label">Tipe<span style="color: red;">*</span></label>
+                    </div>
+                    <select name="tipe" id="tipe" class="form-select">
+                        <option selected>Silakan Pilih Tipe Pengajaran</option>
+                        <option value="sinkron">Sinkronus</option>
+                        <option value="asinkron">Asinkronus</option>
+                    </select>
                 </div>
+                <div class="input-holder">
+                    <div>
+                        <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="catatan-arrow">
+                        <label for="catatan" class="text-label">Catatan<span style="color: red;">*</span></label>
+                    </div>
+                    <textarea class="form-control" name="catatan" id="catatan" cols="30" rows="10" placeholder="Masukkan catatan mengajar hari ini"></textarea>
+                </div>
+                <div class="input-holder">
+                    <div class="dual" style="width: 100%;">
+                        <div style="width: 47%;">
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
+                            <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
+                        </div>
+                        <div style="width: 47%;">
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="durasi-button">
+                            <label for="durasi" class="text-label">Durasi<span style="color: red;">*</span></label>
+                        </div>
+                    </div>
+                    <div class="dual" style="width: 100%;">
+                        <div class="input-and-pic" id="tanggal-buka-hold">
+                            <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
+                            <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
+                        </div>
+                        <div class="input-and-pic" id="durasi-hold">
+                            <input class="form-control"type="text" name="durasi" id="durasi" placeholder="0">
+                            <img src="clock.png" alt="time">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" style="margin: 0px; margin-bottom: 16px;">
+                    <div class="title-bar"></div>
+                    <p class="title">Presensi Murid</p>
+                </div>
+                <div class="row justify-content-between" style="width: 98%;margin: auto;margin-bottom: 0px;">
+                    <p style="width: 130px; margin: 0px;"><b>Nama Murid</b></p>
+                    <p style="width: 300px; text-align: center; margin: 0px"><b>Status</b></p>
+                </div>
+                <hr>
+                <div class="row justify-content-between" style="width: 98%; margin: auto; margin-bottom: 10px;">
+                    <div style="width: 300px;"">
+                        <img src="dummy.jpg" class="profil-nilai">
+                        <span style="width: 190px;">Tamaryu Ryukaso</span>
+                    </div>
+                    <div style="width: 300px; display: flex; align-items: center;">
+                        <input type="radio" name="anak1" id="hehe">
+                        <label for="hehe" style="margin-right: 30px; margin-left: 10px;">Hadir</label>
+                        <input type="radio" name="anak1" id="hehe1">
+                        <label for="hehe1" style="margin-right: 30px; margin-left: 10px;">Izin</label>
+                        <input type="radio" name="anak1" id="hehe2">
+                        <label for="hehe2" style="margin-right: 30px; margin-left: 10px;">Alpha</label>
+                    </div>
+                </div>
+                <div class="row justify-content-between" style="width: 98%; margin: auto; margin-bottom: 10px;">
+                    <div style="width: 300px;"">
+                        <img src="dummy.jpg" class="profil-nilai">
+                        <span style="width: 190px;">Kuro Renge</span>
+                    </div>
+                    <div style="width: 300px; display: flex; align-items: center;">
+                        <input type="radio" name="anak2" id="hehe" value="hadir">
+                        <label for="hehe" style="margin-right: 30px; margin-left: 10px;">Hadir</label>
+                        <input type="radio" name="anak2" id="hehe1" value="izin">
+                        <label for="hehe1" style="margin-right: 30px; margin-left: 10px;">Izin</label>
+                        <input type="radio" name="anak2" id="hehe2" value="alpha">
+                        <label for="hehe2" style="margin-right: 30px; margin-left: 10px;">Alpha</label>
+                    </div>
+                </div>
+                <div class="d-grid gap-2" style="margin-top: 24px;">
+                    <button type="submit" class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
+                </div>
+            </form>
             </div>
-            <div class="dual" style="width: 100%;">
-                <div class="input-and-pic" id="tanggal-buka-hold">
-                    <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
-                    <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
-                </div>
-                <div class="input-and-pic" id="durasi-hold">
-                    <input class="form-control"type="text" name="durasi" id="durasi" placeholder="0">
-                    <img src="clock.png" alt="time">
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="row" style="margin: 0px; margin-bottom: 16px;">
-            <div class="title-bar"></div>
-            <p class="title">Presensi Murid</p>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -96,6 +194,22 @@
                 inputItem.type = 'text';
             }
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(".menu-btn").click(function () {
+            $(".sidebar").toggleClass("active");
+        });
+
+        $(".menu-btn").click(function () {
+            $(".navbar-us").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".suggest").toggleClass("active");
+        });
+        $(".menu-btn").click(function () {
+            $(".page-container").toggleClass("active");
+        });
     </script>
 </body>
 </html>
