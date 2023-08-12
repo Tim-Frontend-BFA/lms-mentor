@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style-lms-mentor.css">
-    <title>Partisipan View</title>
+    <title>Presensi</title>
 </head>
 <body>
     <div class="page-container active">
@@ -70,37 +70,60 @@
         <div class="container card-content" style="max-width: 2500px; width: 90vw;">
             <div class="row" style="margin: 0px; margin-bottom: 16px;">
                 <div class="title-bar"></div>
-                <p class="title">Riwayat Presensi Guru</p>
-            </div>
-            <div class="table-container-presensi">
-                <div class="row justify-content-between presensi-width">
-                    <span style="padding: 0px; width: 5%;"><b>ID</b></span>
-                    <span style="padding: 0px; width: 35%;"><b>Nama Murid</b></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><b>Detail Presensi</b></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><b>Detail Nilai</b></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><b>Detail Report</b></span>
+                <div class="row justify-content-between">
+                    <p class="title">Tugas - 01 : Introduction in Germany</p>
+                    <a href="#" style="padding: 0; width: 24px;"><img src="edit-logo.png"></a>
                 </div>
-                <hr>
-                <div class="row justify-content-between presensi-width">
-                    <span style="padding: 0px; width: 5%;">1</span>
-                    <span style="padding: 0px; width: 35%;"><img src="dummy.jpg" class="profil-nilai" style="margin-right: 16px;">Rei Ryukaso</span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><a href="#"><img src="detailPresensi.svg" style="margin-right: 7px;"><b>Lihat</b></a></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><a href="#"><img src="detailNilai.svg" style="margin-right: 7px;"><b>Lihat</b></a></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><a href="#"><img src="detailReport.svg" style="margin-right: 7px;"><b>Lihat</b></a></span>
-                </div>
-                <div class="row justify-content-between presensi-width">
-                    <span style="padding: 0px; width: 5%;">2</span>
-                    <span style="padding: 0px; width: 35%;"><img src="dummy.jpg" class="profil-nilai" style="margin-right: 16px;">Rei Ryukaso</span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><a href="#"><img src="detailPresensi.svg" style="margin-right: 7px;"><b>Lihat</b></a></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><a href="#"><img src="detailNilai.svg" style="margin-right: 7px;"><b>Lihat</b></a></span>
-                    <span style="padding: 0px; width: 20%; justify-content: center;"><a href="#"><img src="detailReport.svg" style="margin-right: 7px;"><b>Lihat</b></a></span>
+                <div class="row justify-content-start" style="margin-top: 20px;">
+                    <p style="margin: 0px; color: #929292;"><b style="color: black;">Dibuka </b>: HARI, TANGGAL BULAN TAHUN, 23:59 WIB</p>
+                    <p style="margin: 0px; color: #929292;"><b style="color: black;">Ditutup </b>: HARI, TANGGAL BULAN TAHUN, 23:59 WIB</p>
+                    <br><br>
+                    <hr>
+                    <!--KALAU GAPAKE LIST
+                    <p style="margin-left: 30px; color: #929292;">halo</p>-->
+                    <ul style="margin-left: 30px; color: #929292;">
+                        <li>Quiz ini sebagai salah satu syarat kehadiran.</li>
+                        <li>Pahami soal sebelum menjawab.</li>
+                        <li>Pilih jawaban yang paling TEPAT!</li>
+                    </ul>
+                    <div class="row justify-content-center">
+                        <span style="color: #929292; text-align: center; margin-bottom: 15px;">Durasi : 01:00:00</span>
+                        <div class="d-grid gap-2" style="width: 300px;">
+                            <button class="btn" style="background-color: #F9A215; color: #fff;">Nilai Siswa</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
         </div>
 
+        <div class="container" style="max-width: 2500px; width: 90vw; margin-top: 20px;">
+            <div class="row justify-content-between">
+                <button class="topic-button eval">
+                    <p class="topic-button-text eval">Listening I</p>
+                </button>
+                <button class="topic-button eval">
+                    <p class="topic-button-text eval">Listening II</p>
+                </button>
+                <button class="topic-button eval">
+                    <p class="topic-button-text eval">Listening III</p>
+                </button>
+                <button class="topic-button eval">
+                    <p class="topic-button-text eval">Writing</p>
+                </button>
+                <button class="topic-button eval">
+                    <p class="topic-button-text eval">Reading</p>
+                </button>
+            </div>
+        </div>
+        </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $('#gambar').change(function(event){
+            let itempath = URL.createObjectURL(event.target.files[0]);
+            var carinama = event.target.files[0];
+            $('.upload-label > span').text(carinama.name);
+        })
+    </script>
     <script>
         $(".menu-btn").click(function () {
             $(".sidebar").toggleClass("active");

@@ -300,6 +300,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
 }
 
+.gambar-soal{
+    width: 200px;
+    border-radius: 5px;
+}
+
 .gambar-holder, .dokumen-holder, .bukti-holder{
     position: absolute;
     width: 100%;
@@ -478,6 +483,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #fff;
     text-decoration: none;
     cursor: pointer;
+    border: none;
 }
 
 .button-hal-pertemuan{
@@ -607,4 +613,26 @@ option{
 .presensi-width span{
     display: flex;
     align-items: center;
+}
+
+.result-nilai{
+    color: #F9A215;
+}
+
+.nomor-soal:disabled{
+    background-color: #fff;
+    border: none;
+}
+
+input[type=text]:disabled.pilgan{
+    border: none;
+}
+
+.topic-button.eval{
+    width: 18%;
+    height: 20vh;
+}
+
+.topic-button-text.eval{
+    font-size: 24px;
 }

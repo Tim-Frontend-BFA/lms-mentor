@@ -75,86 +75,123 @@
                     <div class="input-holder">
                         <div>
                             <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="pertanyaan-arrow">
-                            <label for="judul" class="text-label">Judul<span style="color: red;">*</span></label>
+                            <label for="judul" class="text-label">Nama Murid<span style="color: red;">*</span></label>
                         </div>
-                        <input class="form-control" type="text" name="pertanyaan" id="pertanyaan" placeholder="Masukkan pertanyaan">
+                        <input class="form-control" type="text" name="judul" id="judul" placeholder="Masukkan pertanyaan">
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="pertanyaan-arrow">
+                            <label for="lahir" class="text-label">Tanggal Lahir<span style="color: red;">*</span></label>
+                        </div>
+                        <div class="input-and-pic" id="lahir-hold" style="width: 100%;">
+                            <input class="form-control" type="text" onfocus="hideCal('lahir','lahir-cal')" onblur="hideCal('lahir','lahir-cal')" name="lahir" id="lahir" placeholder="DD/MM/YYYY">
+                            <img src="calendar-2.png" alt="date" id="lahir-cal">
+                        </div>
                     </div>
                     <div class="input-holder">
                         <div>
                             <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
-                            <label for="subjudul" class="text-label">Subjudul</label>
+                            <label for="Domisili" class="text-label">Domisili<span style="color: red;">*</span></label>
                         </div>
-                        <input class="form-control" type="text" name="subjudul" id="subjudul" placeholder="Masukkan subjudul">
+                        <input class="form-control" type="text" name="Domisili" id="Domisili" placeholder="Masukkan subjudul">
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="tempat" class="text-label">Tempat Ujian<span style="color: red;">*</span></label>
+                        </div>
+                        <input class="form-control" type="text" name="tempat" id="tempat" placeholder="Masukkan subjudul">
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="pertanyaan-arrow">
+                            <label for="ujian" class="text-label">Tanggal Ujian<span style="color: red;">*</span></label>
+                        </div>
+                        <div class="input-and-pic" id="ujian-hold" style="width: 100%;">
+                            <input class="form-control" type="text" onfocus="hideCal('ujian','ujian-cal')" onblur="hideCal('ujian','ujian-cal')" name="ujian" id="ujian" placeholder="DD/MM/YYYY">
+                            <img src="calendar-2.png" alt="date" id="ujian-cal">
+                        </div>
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Kelas" class="text-label">Kelas<span style="color: red;">*</span></label>
+                        </div>
+                        <input class="form-control" type="text" name="Kelas" id="Kelas" placeholder="Masukkan subjudul">
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Tingkat" class="text-label">Tingkat<span style="color: red;">*</span></label>
+                        </div>
+                        <select class="form-control" name="Tingkat" id="Tingkat">
+                            <option value="def" selected>Silakan Pilih Tingkat</option>
+                            <option value="a1">A1</option>
+                            <option value="a2">A2</option>
+                            <option value="b1">B1</option>
+                            <option value="b2">B2</option>
+                            <option value="c1">C1</option>
+                            <option value="c2">C2</option>
+                          </select>
+                    </div>
+                    <div class="row justify-content-between" style="width: 100%; margin: auto;">
+                        <div style="width: 23%; padding: 0px;">
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Listening" class="text-label">Listening<span style="color: red;">*</span></label>
+                        </div>
+                        <div style="width: 23%; padding: 0px;">
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Reading" class="text-label">Reading<span style="color: red;">*</span></label>
+                        </div>
+                        <div style="width: 23%; padding: 0px;">
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Writing" class="text-label">Writing<span style="color: red;">*</span></label>
+                        </div>
+                        <div style="width: 23%; padding: 0px;">
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Speaking" class="text-label">Speaking<span style="color: red;">*</span></label>
+                        </div>
+                        <input style="width: 23%;" class="form-control" type="text" name="Listening" id="Listening" placeholder="Masukkan subjudul">
+                        <input style="width: 23%;" class="form-control" type="text" name="Reading" id="Reading" placeholder="Masukkan subjudul">
+                        <input style="width: 23%;" class="form-control" type="text" name="Writing" id="Writing" placeholder="Masukkan subjudul">
+                        <input style="width: 23%;" class="form-control" type="text" name="Speaking" id="Speaking" placeholder="Masukkan subjudul">
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Total" class="text-label">Total<span style="color: red;">*</span></label>
+                        </div>
+                        <input class="form-control" type="text" name="Total" id="Total" placeholder="Masukkan subjudul">
+                    </div>
+                    <div class="input-holder">
+                        <div>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Predikat" class="text-label">Predikat<span style="color: red;">*</span></label>
+                        </div>
+                        <input class="form-control" type="text" name="Predikat" id="Predikat" placeholder="Masukkan subjudul">
                     </div>
                     <div class="input-holder">
                         <div>
                             <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="deskripsi-arrow">
-                            <label for="deskripsi" class="text-label">Deskripsi<span style="color: red;">*</span></label>
+                            <label for="Catatan" class="text-label">Catatan<span style="color: red;">*</span></label>
                         </div>
-                        <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10" placeholder="Masukkan deskripsi"></textarea>
+                        <textarea class="form-control" name="Catatan" id="Catatan" cols="30" rows="10" placeholder="Masukkan deskripsi"></textarea>
                     </div>
                     <div class="input-holder">
                         <div>
-                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="dokumen-arrow">
-                            <label for="dokumen" class="text-label">Dokumen pendukung</label>
+                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                            <label for="Penilaian" class="text-label">Penilaian<span style="color: red;">*</span></label>
                         </div>
-                        <div class="box">
-                            <input type="file" name="dokumen" id="dokumen" class="dokumen-holder" multiple>
-                            <label for="dokumen">
-                                <div class="upload-label">
-                                    <img src="document-text.png">
-                                    <span style="color: #929292;">Seret dan letakkan dokumen anda disini.</span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="input-holder">
-                        <div>
-                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-buka-button">
-                            <label for="tanggal" class="text-label">Tanggal dibuka<span style="color: red;">*</span></label>
-                        </div>
-                        <div class="dual" style="width: 100%;">
-                            <div class="input-and-pic" id="tanggal-buka-hold">
-                                <input class="form-control" type="text" onfocus="hideCal('tanggal-buka','tanggal-dibuka-cal')" onblur="hideCal('tanggal-buka','tanggal-dibuka-cal')" name="tanggal-buka" id="tanggal-buka" placeholder="DD/MM/YYYY">
-                                <img src="calendar-2.png" alt="date" id="tanggal-dibuka-cal">
-                            </div>
-                            <div class="input-and-pic" id="jam-buka-hold">
-                                <input class="form-control"type="text" name="jam-buka" id="jam-buka" placeholder="00:00 ∙ WIB">
-                                <img src="clock.png" alt="time">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-holder">
-                        <div>
-                            <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="tanggal-tenggat-button">
-                            <label for="tanggal" class="text-label">Tenggat waktu<span style="color: red;">*</span></label>
-                        </div>
-                        <div class="dual" style="width: 100%;">
-                            <div class="input-and-pic" id="tanggal-tenggat-hold">
-                                <input class="form-control" type="text" onfocus="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" onblur="hideCal('tanggal-tenggat','tanggal-ditutup-cal')" name="tanggal-tenggat" id="tanggal-tenggat" placeholder="DD/MM/YYYY">
-                                <img src="calendar-2.png" alt="date" id="tanggal-ditutup-cal">
-                            </div>
-                            <div class="input-and-pic" id="jam-tenggat-hold">
-                                <input class="form-control"type="text" name="jam-tenggat" id="jam-tenggat" placeholder="00:00 ∙ WIB">
-                                <img src="clock.png" alt="time">
-                            </div>
-                        </div>
+                        <input class="form-control" type="text" name="Penilaian" id="Penilaian" placeholder="Masukkan subjudul">
                     </div>
                     <div class="d-grid gap-2" style="margin-top: 24px;">
-                        <button type="submit" class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
+                        <button type="submit" class="btn" style="background-color: #F9A215; color: #fff;">Cetak</button>
                     </div>
                 </form>
             </div>
           </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $('#dokumen').change(function(event){
-            let itempath = URL.createObjectURL(event.target.files[0]);
-            var carinama = event.target.files[0];
-            $('.upload-label > span').text(carinama.name);
-        })
-    </script>
     <script>
         function hideCal(inputID, imageID){
             inputItem = document.getElementById(inputID);

@@ -99,31 +99,455 @@
                 </div>
             </div>
         </div>
-        <div class="container card-content" style="max-width: 2500px; width: 90vw;">
-            <div class="row" style="margin: 0px; margin-bottom: 16px;">
-                <div class="title-bar"></div>
-                <p class="title">Nilai</p>
-            </div>
+        <!--item-1 UBAH PER-ID (id)-->
+        <div class="container card-content" style="max-width: 2500px; width: 90vw;" id="pertemuan1-hold">
             <form>
-                <div class="table-container-presensi">
-                    <div class="row justify-content-start presensi-width" style="width: 100%; margin: 0px;">
-                        <img src="dummy.jpg" class="profil-nilai">
-                        <div class="row justify-content-between" style="width: 99%;">
-                            <p style="width: 200px;">Orsun Solasta</p>
-                            <div style="width: 130px;">
-                                <a href="#"><img src="import.png"></a>
-                                <input type="text" name="nilai" id="nilai" class="nilai-input">
+                <fieldset id="soal1-form" disabled>
+                    <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                        <div class="title-bar"></div>
+                        <div class="row justify-content-between">
+                            
+                                <!--
+                                    ENABLE: CLASS 'bukan-tambah-topik'
+                                    DISABLE: CLASS 'tambah-topik'
+                                -->
+                                <!--item2 UBAH PER-ID (name & id)-->
+                                <select name="soal1" id="soal1" class="nomor-soal form-control title" style="width: 7%;">
+                                    <option value="soal1" selected>Soal 1</option>
+                                    <option value="soal2">Soal 2</option>
+                                    <option value="soal3">Soal 3</option>
+                                    <option value="soal4">Soal 4</option>
+                                </select>
+                                <input type="submit" hidden>
+                            <!--item3 UBAH PER-ID (data-bs-target)-->
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal1" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="Pertanyaan1" class="text-label">Pertanyaan<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="Pertanyaan1" id="Pertanyaan1" placeholder="Masukkan Pertanyaan">
+                        </div>
+                        <div>
+                            <img src="card-dummy.jpg" class="gambar-soal">
+                            <button type="button" id="hapus-01" class="btn" style="background-color: #F9A215; color: #fff; display: none;">Hapus Foto</button>
+                        </div>
+                        <div class="input-holder" id="upload-01" style="display: none;">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
+                                <label for="gambar" class="text-label">Gambar Pendukung</label>
+                            </div>
+                            <div class="box">
+                                <input type="file" name="gambar" id="gambar" class="gambar-holder" multiple>
+                                <label for="gambar">
+                                    <div class="upload-label">
+                                        <img src="picture1.png">
+                                        <span style="color: #929292;">Seret dan letakkan Gambar anda disini.</span>
+                                    </div>
+                                </label>
                             </div>
                         </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban1" class="text-label">Kunci Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="jawaban1" id="jawaban1" placeholder="Masukkan Jawaban">
+                        </div>
+                        <div id="submit-01" style="margin-top: 24px; display: none;">
+                            <button type="submit" class="btn" style="background-color: #F9A215; color: #fff; width: 100%;">Simpan</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!--UBAH PER-ID - ikut item3(id)-->
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="enabledisablekuisisian('soal1-form','upload-01','submit-01','hapus-01')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="eraseitem('soal1','pertemuan1-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
                     </div>
                 </div>
-                <div class="d-grid gap-2">
-                    <button class="btn" style="background-color: #F9A215; color: #fff;">Simpan</button>
-                </div>
+            </div>
+        </div>
+        <!--END OF NOTE-->
+
+        <div class="container card-content" style="max-width: 2500px; width: 90vw;" id="pertemuan1-hold">
+            <form>
+                <fieldset id="soal2-form" disabled>
+                    <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                        <div class="title-bar"></div>
+                        <div class="row justify-content-between">
+                            
+                                <!--
+                                    ENABLE: CLASS 'bukan-tambah-topik'
+                                    DISABLE: CLASS 'tambah-topik'
+                                -->
+                                <!--item2 UBAH PER-ID (name & id)-->
+                                <select name="soal1" id="soal1" class="nomor-soal form-control title" style="width: 7%;">
+                                    <option value="soal1">Soal 1</option>
+                                    <option value="soal2" selected>Soal 2</option>
+                                    <option value="soal3">Soal 3</option>
+                                    <option value="soal4">Soal 4</option>
+                                </select>
+                            <!--item3 UBAH PER-ID (data-bs-target)-->
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal2" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="Pertanyaan2" class="text-label">Pertanyaan<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="Pertanyaan2" id="Pertanyaan2" placeholder="Masukkan Pertanyaan">
+                        </div>
+                        <div>
+                            <img src="card-dummy.jpg" class="gambar-soal">
+                            <button type="button" id="hapus-02" class="btn" style="background-color: #F9A215; color: #fff; display: none;">Hapus Foto</button>
+                        </div>
+                        <div class="input-holder" id="upload-02" style="display: none;">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
+                                <label for="gambar" class="text-label">Gambar Pendukung</label>
+                            </div>
+                            <div class="box">
+                                <input type="file" name="gambar" id="gambar" class="gambar-holder" multiple>
+                                <label for="gambar">
+                                    <div class="upload-label">
+                                        <img src="picture1.png">
+                                        <span style="color: #929292;">Seret dan letakkan Gambar anda disini.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban2" class="text-label">Pilihan Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan1" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihana1" id="pilihana1" placeholder="Masukkan Jawaban">
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan1" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihanb1" id="pilihanb1" placeholder="Masukkan Jawaban">
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan1" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihanc1" id="pilihanc1" placeholder="Masukkan Jawaban">
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan1" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihand1" id="pilihand1" placeholder="Masukkan Jawaban">
+                            </div>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban2" class="text-label">Kunci Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%; color: #F9A215;">
+                                <input type="radio" name="pilgan1" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px;" checked="checked" disabled>
+                                <input class="form-control pilgan" type="text" name="jawaban2" id="jawaban2" value="Masukkan Jawaban" style="color: #F9A215;">
+                            </div>
+                        </div>
+                        <div id="submit-02" style="margin-top: 24px; display: none;">
+                            <button type="submit" class="btn" style="background-color: #F9A215; color: #fff; width: 100%;">Simpan</button>
+                        </div>
+                    </div>
+                </fieldset>
             </form>
+            <!--UBAH PER-ID - ikut item3(id)-->
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="enabledisablekuispilgan('soal2-form','upload-02','submit-02','hapus-02', 'pilgan1')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="eraseitem('soal1','pertemuan1-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF NOTE-->
+
+        <!--tambah isian-->
+        <div class="container card-content" style="max-width: 2500px; width: 90vw; display: none;" id="isian-hold">
+            <form>
+                <fieldset id="soal-isian-form">
+                    <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                        <div class="title-bar"></div>
+                        <div class="row justify-content-between">
+                            
+                                <!--
+                                    ENABLE: CLASS 'bukan-tambah-topik'
+                                    DISABLE: CLASS 'tambah-topik'
+                                -->
+                                <!--item2 UBAH PER-ID (name & id)-->
+                                <select name="soal-isian" id="soal-isian" class="nomor-soal form-control title" style="width: 7%;">
+                                    <option value="soal1">Soal 1</option>
+                                    <option value="soal2">Soal 2</option>
+                                    <option value="soal3" selected>Soal 3</option>
+                                    <option value="soal4">Soal 4</option>
+                                </select>
+                                <input type="submit" hidden>
+                            <!--item3 UBAH PER-ID (data-bs-target)-->
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-isian" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="Pertanyaan-isian" class="text-label">Pertanyaan<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="Pertanyaan-isian" id="Pertanyaan-isian" placeholder="Masukkan Pertanyaan">
+                        </div>
+                        <div class="input-holder" id="upload-isian" style="display: block;">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
+                                <label for="gambar" class="text-label">Gambar Pendukung</label>
+                            </div>
+                            <div class="box">
+                                <input type="file" name="gambar" id="gambar" class="gambar-holder" multiple>
+                                <label for="gambar">
+                                    <div class="upload-label">
+                                        <img src="picture1.png">
+                                        <span style="color: #929292;">Seret dan letakkan Gambar anda disini.</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <!--KALAU GADIPAKE HAPUS AJA-->
+                            <button type="button" id="hapus-isian" class="btn" style="background-color: #F9A215; color: #fff;">Hapus Foto</button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban1" class="text-label">Kunci Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="jawaban-isian" id="jawaban-isian" placeholder="Masukkan Jawaban">
+                        </div>
+                        <div id="submit-isian" style="margin-top: 24px; display: block;">
+                            <button type="submit" class="btn" style="background-color: #F9A215; color: #fff; width: 100%;">Simpan</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!--UBAH PER-ID - ikut item3(id)-->
+            <div class="modal fade" id="modal-isian" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="enabledisablekuisisian('soal-isian-form','upload-isian','submit-isian','hapus-isian')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="eraseitem('soal1','pertemuan1-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF NOTE-->
+
+        <!--tambah pilgan-->
+        <div class="container card-content" style="max-width: 2500px; width: 90vw; display: none;" id="pilgan-hold">
+            <form>
+                <fieldset id="soal-pilgan-form">
+                    <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                        <div class="title-bar"></div>
+                        <div class="row justify-content-between">
+                                <!--
+                                    ENABLE: CLASS 'bukan-tambah-topik'
+                                    DISABLE: CLASS 'tambah-topik'
+                                -->
+                                <!--item2 UBAH PER-ID (name & id)-->
+                                <select name="soal-pilgan" id="soal-pilgan" class="nomor-soal form-control title" style="width: 7%;">
+                                    <option value="soal1">Soal 1</option>
+                                    <option value="soal2">Soal 2</option>
+                                    <option value="soal3">Soal 3</option>
+                                    <option value="soal4" selected>Soal 4</option>
+                                </select>
+                            <!--item3 UBAH PER-ID (data-bs-target)-->
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-pilgan" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="Pertanyaan-pilgan" class="text-label">Pertanyaan<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="Pertanyaan-pilgan" id="Pertanyaan-pilgan" placeholder="Masukkan Pertanyaan">
+                        </div>
+                        <div class="input-holder" id="upload-pilgan" style="display: block;">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="bukti-arrow">
+                                <label for="gambar" class="text-label">Gambar Pendukung</label>
+                            </div>
+                            <div class="box">
+                                <input type="file" name="gambar" id="gambar" class="gambar-holder" multiple>
+                                <label for="gambar">
+                                    <div class="upload-label">
+                                        <img src="picture1.png">
+                                        <span style="color: #929292;">Seret dan letakkan Gambar anda disini.</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <!--HAPUS AJA KALO GAKEPAKE-->
+                            <button type="button" id="hapus-pilgan" class="btn" style="background-color: #F9A215; color: #fff; display: none;">Hapus Foto</button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban2" class="text-label">Pilihan Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px; display: none;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihana-pilgan" id="pilihana-pilgan" placeholder="Masukkan Jawaban">
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px; display: none;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihanb-pilgan" id="pilihanb-pilgan" placeholder="Masukkan Jawaban">
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px; display: none;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihanc-pilgan" id="pilihanc-pilgan" placeholder="Masukkan Jawaban">
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%;">
+                                <input type="radio" name="pilgan" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px; display: none;" disabled>
+                                <input class="form-control pilgan" type="text" name="pilihand-pilgan" id="pilihand-pilgan" placeholder="Masukkan Jawaban">
+                            </div>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban-pilgan" class="text-label">Kunci Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center; width: 100%; color: #F9A215;">
+                                <input type="radio" name="pilgan" id="pilgan1" style="width: 0px; height: 0px; margin-right: 10px; display: none;" checked="checked" disabled>
+                                <input class="form-control pilgan" type="text" name="jawaban-pilgan" id="jawaban-pilgan" value="Masukkan Jawaban" style="color: #F9A215;">
+                            </div>
+                        </div>
+                        <div id="submit-pilgan" style="margin-top: 24px; display: block;">
+                            <button type="submit" class="btn" style="background-color: #F9A215; color: #fff; width: 100%;">Simpan</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!--UBAH PER-ID - ikut item3(id)-->
+            <div class="modal fade" id="modal-pilgan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="enabledisablekuispilgan('soal-pilgan-form','upload-pilgan','submit-pilgan','hapus-pilgan', 'pilgan')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="eraseitem('soal1','pertemuan1-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF NOTE-->
+        <div class="container" style="max-width: 2500px; width: 90vw; margin-top: 20px;">
+            <div class="row justify-content-end">
+                <button class="topic-button" data-bs-toggle="modal" data-bs-target="#modal-tambah">
+                    <p class="topic-button-text">+ Tambah Soal</p>
+                </button>
+            </div>
+            <div class="modal fade" id="modal-tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="tambahitem('isian-hold','pilgan-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <span class="edit-menu">Isian Singkat</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="tambahitem('pilgan-hold','isian-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <span class="edit-menu">Pilihan Ganda</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $('#gambar').change(function(event){
+            let itempath = URL.createObjectURL(event.target.files[0]);
+            var carinama = event.target.files[0];
+            $('.upload-label > span').text(carinama.name);
+        })
+    </script>
     <script>
         $(".menu-btn").click(function () {
             $(".sidebar").toggleClass("active");
@@ -138,6 +562,69 @@
         $(".menu-btn").click(function () {
             $(".page-container").toggleClass("active");
         });
+    </script>
+    <script>
+        function tambahitem(target, lawan){
+            var targetitem = document.getElementById(target);
+            var lawanitem = document.getElementById(lawan);
+
+            if(targetitem.style.display =="block"){
+                targetitem.style.display="none";
+            } else{
+                targetitem.style.display = "block";
+                lawanitem.style.display = "none";
+            }
+        }
+        function enabledisablekuisisian(nameid, uploadid, submitid, hapusid){
+            var nameitem = document.getElementById(nameid);
+            var uploaditem = document.getElementById(uploadid);
+            var submititem = document.getElementById(submitid);
+            var hapusitem = document.getElementById(hapusid);
+
+            if (nameitem.disabled){
+                nameitem.disabled = false
+                uploaditem.style.display="block"
+                submititem.style.display="block"
+                hapusitem.style.display="inline"
+            } else{
+                nameitem.disabled = true
+                uploaditem.style.display="none"
+                submititem.style.display="none"
+                hapusitem.style.direction="none"
+            }
+        }
+        function enabledisablekuispilgan(nameid, uploadid, submitid, hapusid, radioid){
+            var nameitem = document.getElementById(nameid);
+            var uploaditem = document.getElementById(uploadid);
+            var submititem = document.getElementById(submitid);
+            var hapusitem = document.getElementById(hapusid);
+            var temp = "input[name='";
+            var final = temp.concat(radioid,"']")
+
+            if (nameitem.disabled){
+                nameitem.disabled = false
+                uploaditem.style.display="block"
+                submititem.style.display="block"
+                hapusitem.style.display="inline"
+                $(final).each(function(){
+                    this.style.display="none"
+                })
+            } else{
+                nameitem.disabled = true
+                uploaditem.style.display="none"
+                submititem.style.display="none"
+                hapusitem.style.display="none"
+                $(final).each(function(){
+                    this.style.display="block"
+                })
+            }
+        }
+        function eraseitem(topikid, holderid){
+            var topik = document.getElementById(topikid);
+            var holder = document.getElementById(holderid);
+
+            holder.style.display = "none";
+        }
     </script>
 </body>
 </html>
