@@ -628,6 +628,10 @@ input[type=text]:disabled.pilgan{
     border: none;
 }
 
+textarea:disabled{
+    background-color: #fff !important;
+}
+
 .topic-button.eval{
     width: 18%;
     height: 20vh;
