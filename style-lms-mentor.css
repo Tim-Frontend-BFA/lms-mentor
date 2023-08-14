@@ -148,6 +148,22 @@ ul li, li a{
     justify-content: center;
 }
 
+.sidebar-subtitle{
+    padding-left: 30% !important;
+}
+
+.sidebar-subtitle .text{
+    font-size: 14px;
+}
+
+.sidebar-subsubtitle{
+    padding-left: 40% !important;
+}
+
+.sidebar-subsubtitle .text{
+    font-size: 12px;
+}
+
 .sidebar.active .menu > ul > li > a .text{
     position: absolute;
     left: 70px;
@@ -592,17 +608,19 @@ input[type='text']:disabled{
 input[type=radio] {
     appearance: none;
     padding: 10px;
-    background-color: white;
-    border: 1px solid #929292;
-    border-radius:50%;
+    background: url("radio-no.svg");
+    background-repeat: no-repeat;
+    background-position: center;
  }
 
 input[type=radio]:checked {
-    background-color: #f9a215;
+    background: url("radio-yes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     border:  1px solid #fff;
- }
+}
 
- input[type=radio]:checked + label{
+input[type=radio]:checked + label{
     color: #f9a215;
 }
 

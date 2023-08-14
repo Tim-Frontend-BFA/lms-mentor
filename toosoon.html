@@ -96,23 +96,9 @@
             </div>
         </div>
         <div class="container card-content" style="max-width: 2500px; width: 90vw;" id="pilgan-hold">
-            <form>
-                <fieldset id="soal-pilgan-form">
                     <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
-                        <div class="row justify-content-between">
-                                <!--
-                                    ENABLE: CLASS 'bukan-tambah-topik'
-                                    DISABLE: CLASS 'tambah-topik'
-                                -->
-                                <!--item2 UBAH PER-ID (name & id)-->
-                                <select name="soal-pilgan" id="soal-pilgan" class="nomor-soal form-control title" style="width: 7%;">
-                                    <option value="soal1">Soal 1</option>
-                                    <option value="soal2">Soal 2</option>
-                                    <option value="soal3">Soal 3</option>
-                                    <option value="soal4" selected>Soal 4</option>
-                                </select>
-                            <!--item3 UBAH PER-ID (data-bs-target)-->
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-pilgan" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                        <div class="row justify-content-start">
+                                <span class="title">Soal 1</span>
                         </div>
                         <div class="input-holder" id="upload-pilgan" style="display: block;">
                             <button type="button" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="play-circle.svg"></button>
@@ -173,8 +159,6 @@
                             <button type="submit" class="btn" style="background-color: #F9A215; color: #fff; width: 100%;">Simpan</button>
                         </div>
                     </div>
-                </fieldset>
-            </form>
             <!--UBAH PER-ID - ikut item3(id)-->
             <div class="modal fade" id="modal-pilgan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
