@@ -195,6 +195,113 @@
             </div>
         </div>
         <!--END OF NOTE-->
+
+        <!--tambah isian-->
+        <div class="container card-content" style="max-width: 2500px; width: 90vw; display: none;" id="isian-hold">
+            <form>
+                <fieldset id="soal-isian-form">
+                    <div class="row" style="margin: 0px; margin-bottom: 16px; align-items: center;">
+                        <div class="title-bar"></div>
+                        <div class="row justify-content-between">
+                            
+                                <!--
+                                    ENABLE: CLASS 'bukan-tambah-topik'
+                                    DISABLE: CLASS 'tambah-topik'
+                                -->
+                                <!--item2 UBAH PER-ID (name & id)-->
+                                <select name="soal-isian" id="soal-isian" class="nomor-soal form-control title" style="width: 7%;">
+                                    <option value="soal1">Soal 1</option>
+                                    <option value="soal2">Soal 2</option>
+                                    <option value="soal3" selected>Soal 3</option>
+                                    <option value="soal4">Soal 4</option>
+                                </select>
+                                <input type="submit" hidden>
+                            <!--item3 UBAH PER-ID (data-bs-target)-->
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-isian" style="padding: 0; width: 24px; border: none; background-color: #fff;"><img src="setting-2.png"></button>
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="Pertanyaan-isian" class="text-label">Pertanyaan<span style="color: red;">*</span></label>
+                            </div>
+                            <input class="form-control" type="text" name="Pertanyaan-isian" id="Pertanyaan-isian" placeholder="Masukkan Pertanyaan">
+                        </div>
+                        <div class="input-holder">
+                            <div>
+                                <img src="arrow-down.png" alt="arrow" style="user-select: none;" id="subjudul-arrow">
+                                <label for="jawaban1" class="text-label">Kunci Jawaban<span style="color: red;">*</span></label>
+                            </div>
+                            <select class="form-control" name="jawaban-isian" id="jawaban-isian" style="color: #F9A215;">
+                                <option value="true" selected>True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+                        <div id="submit-isian" style="margin-top: 24px; display: block;">
+                            <button type="submit" class="btn" style="background-color: #F9A215; color: #fff; width: 100%;">Simpan</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!--UBAH PER-ID - ikut item3(id)-->
+            <div class="modal fade" id="modal-isian" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="enabledisablekuisisian('soal-isian-form','upload-isian','submit-isian','hapus-isian')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-mentor.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">sunting</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="eraseitem('soal1','pertemuan1-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <img src="sunting-hapus.svg" style="margin-right: 10px;">
+                                <span class="edit-menu">hapus</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF NOTE-->
+
+        <div class="container" style="max-width: 2500px; width: 90vw; margin-top: 20px;">
+            <div class="row justify-content-end">
+                <button class="topic-button" data-bs-toggle="modal" data-bs-target="#modal-tambah">
+                    <p class="topic-button-text">+ Tambah Soal</p>
+                </button>
+            </div>
+            <div class="modal fade" id="modal-tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; border: none;">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!--UBAH PER-ID - ikut item2 (onclick)-->
+                            <button type="button" onclick="tambahitem('isian-hold','pilgan-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <span class="edit-menu">Isian Singkat</span>
+                            </button>
+                            <!--UBAH PER-ID - ikut (item2, item1) (onclick)-->
+                            <button type="button" onclick="tambahitem('pilgan-hold','isian-hold')" data-bs-dismiss="modal" style="background-color: #fff; border: none; margin-bottom: 20px; text-align: start;">
+                                <span class="edit-menu">Pilihan Ganda</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
@@ -203,6 +310,17 @@
             var carinama = event.target.files[0];
             $('.upload-label > span').text(carinama.name);
         })
+        function tambahitem(target, lawan){
+            var targetitem = document.getElementById(target);
+            var lawanitem = document.getElementById(lawan);
+
+            if(targetitem.style.display =="block"){
+                targetitem.style.display="none";
+            } else{
+                targetitem.style.display = "block";
+                lawanitem.style.display = "none";
+            }
+        }
     </script>
     <script>
         $(".menu-btn").click(function () {
